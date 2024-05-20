@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Finance Tracker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.6.0/math.min.js"></script>
+</head>
+<body>
+    <div id="main" ws-children-template="ExpTracker">
+        <div>
+            <!--<p>EntryType - ${Abc}</p>
+    <p>EntryType - ${something}</p>-->
+            <h3>Add Entry</h3>
+            <select ws-var="entryType" id="entryType" ws-onchange="TypeChange">
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
+            </select>
+            <br>
+            <input id="category" type="text" placeholder="Category">
+            <br>
+            <input id="amount" type="number" placeholder="Amount">
+            <br>
+            <button id="addEntry">Add Entry</button>
+        </div>
+        <hr>
+        <div>
+            <h3>Financial Dashboard</h3>
+            <div>Total Balance: <span id="totalBalance">0.00</span></div>
+            <h4>Entries</h4>
+            <div id="entries"></div>
+        </div>
+    </div>
+    <script ws-replace="scripts"></script>
+</body>
+</html>

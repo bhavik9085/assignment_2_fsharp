@@ -1,0 +1,9 @@
+E:\123\assignment\assignment\bin\Debug\net6.0\assignment.deps.json
+E:\123\assignment\assignment\bin\Debug\net6.0\assignment.dll
+E:\123\assignment\assignment\bin\Debug\net6.0\assignment.pdb
+E:\123\assignment\assignment\obj\Debug\net6.0\assignment.fsproj.AssemblyReference.cache
+E:\123\assignment\assignment\obj\Debug\net6.0\assignment.AssemblyInfoInputs.cache
+E:\123\assignment\assignment\obj\Debug\net6.0\assignment.AssemblyInfo.fs
+E:\123\assignment\assignment\obj\Debug\net6.0\assignment.fsproj.CoreCompileInputs.cache
+E:\123\assignment\assignment\obj\Debug\net6.0\assignment.dll
+E:\123\assignment\assignment\obj\Debug\net6.0\assignment.pdb

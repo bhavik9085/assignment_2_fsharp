@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        /* Sticky footer styles */
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            /* Margin bottom by footer height */
+            margin-bottom: 60px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            /* Set the fixed height of the footer here */
+            height: 60px;
+            background-color: #f5f5f5;
+        }
+
+        .container .text-muted {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Your App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav"><li class="nav-item"><a class="nav-link" href="index.html">ExpTracker</a></li><li class="nav-item"><a class="active nav-link" href="other.html">OtherPage</a></li></ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Say Hi to JavaScript!</h1><div><div id="ws1603271773"></div></div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">
+                For an enhanced template that provides automatic GitHub deployment to Azure, fork from <a href="https://github.com/intellifactory/ClientServer.Azure">GitHub</a>, or
+                read more <a href="https://websharper.com/blog-entry/4368/deploying-websharper-apps-to-azure-via-github">here</a>.
+            </p>
+        </div>
+    </footer>
+    <meta id='websharper-data' name='websharper-data' content='{"$TYPES":[["WebSharper","Web","FSharpInlineControl"]],"$DATA":{"$V":{"ws1603271773":{"$T":0,"$V":{"args":[],"funcName":["assignment","Client","Main"]}}}}}' />
+<script src="Scripts/WebSharper.Core.JavaScript/Runtime.js" type="text/javascript" charset="UTF-8"></script><!--[if lte IE 7.0]>
+<script src="Scripts/WebSharper.Main/Json.js" type="text/javascript" charset="UTF-8"></script><![endif]-->
+<!--[if lte IE 11.0]>
+<script src="Scripts/WebSharper.UI/closest.js" type="text/javascript" charset="UTF-8"></script><![endif]-->
+<!--[if lte IE 9.0]>
+<script src="Scripts/WebSharper.Main/AnimFrame.js" type="text/javascript" charset="UTF-8"></script><![endif]-->
+<script src="Scripts/WebSharper.Main/WebSharper.Main.js" type="text/javascript" charset="UTF-8"></script><script src="Scripts/WebSharper.Collections/WebSharper.Collections.js" type="text/javascript" charset="UTF-8"></script><script src="Scripts/WebSharper.Web/WebSharper.Web.js" type="text/javascript" charset="UTF-8"></script><script src="Scripts/WebSharper.MathJS.Extensions/WebSharper.MathJS.Extensions.js" type="text/javascript" charset="UTF-8"></script><script src="Scripts/WebSharper.UI/WebSharper.UI.js" type="text/javascript" charset="UTF-8"></script><script src="Scripts/WebSharper.UI.Templating.Runtime/WebSharper.UI.Templating.Runtime.js" type="text/javascript" charset="UTF-8"></script><script src="Scripts/assignment/assignment.js" type="text/javascript" charset="UTF-8"></script><script type="text/javascript">
+if (typeof WebSharper !=='undefined') {
+  WebSharper.Runtime.ScriptBasePath = 'Scripts/';
+  WebSharper.Runtime.Start();
+}
+</script>
+
+<div style="display:none" ws-children-template="ExpTracker">
+                <div class="my-4">
+                    
+                    <h4>Add Entry</h4>
+                    <div class="row">
+                        <div class="form-group col-6 mb-3">
+                            <label for="entryType">Select your entry Type</label>
+                            <select id="entryType" ws-onchange="TypeChange" class="form-control" ws-var="entryType">
+                                <option value="Income" selected="">Income</option>
+                                <option value="Expense">Expense</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-6 mb-3">
+                            <label for="category">Enter category of your Income/Expense</label>
+                            <input id="category" type="text" ws-onkeyup="CatInput" class="form-control" placeholder="Category" ws-var="category" />
+                        </div>
+                        <div class="form-group col-6 mb-3">
+                            <label for="amount">Enter the Amount</label>
+                            <input id="amount" class="form-control" type="number" ws-onkeyup="AmountInput" placeholder="Amount" ws-var="amount" />
+                        </div>
+                        <div class="form-group col-6 mb-3">
+                            <label for="date">Pick the date of event</label>
+                            <input id="date" class="form-control" type="date" ws-onchange="DateInput" ws-var="eventDate" />
+                        </div>
+                        <div class="form-group col-3 mb-3">
+                            <button id="addEntry" class="btn btn-success" ws-onclick="AddEntry">Add Entry</button>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="my-4">
+                    <h4>Financial Dashboard</h4>
+                    <h5>Total Balance: <span id="totalBalance">${TotalBalance}</span></h5>
+                    <br />
+                    <h5>Entries</h5>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Category</th>
+                                <th>Amount</th>
+                                <th>EventDate</th>
+                            </tr>
+                        </thead>
+                        <tbody><tr ws-replace="Entries"></tr></tbody>
+                    </table>
+                </div>
+                <div ws-replace="Graph"></div>
+            </div><table style="display:none"><tbody ws-children-template="Item"><tr>
+                                <td>${Type}</td>
+                                <td>${Category}</td>
+                                <td>${Amount}</td>
+                                <td>${EventDate}</td>
+                            </tr></tbody></table><div style="display:none" ws-children-template="MainForm"><div>
+                <input ws-var="TextToReverse" />
+                <button ws-onclick="OnSend">Send</button>
+                <hr />
+                <h4 class="text-muted">The server responded:</h4>
+                <div class="jumbotron"><h1>${Reversed}</h1></div>
+            </div></div></body>
+</html>
